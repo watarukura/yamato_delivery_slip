@@ -27,6 +27,40 @@
     <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
         <section class="sheet padding-10mm">
             <!-- Write HTML just like a web page -->
+            <article class="shipping_slip">
+                <div class="delivery_telno delivery_zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
+                <div class="delivery_address1">東京都新宿区新宿6-27-30</div>
+                <div class="delivery_address2">新宿イーストサイドスクエア3F</div>
+                <div class="delivery_name">テスト てすたろう</div>
+                <div class="telno zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
+
+                <div class="address1">東京都新宿区新宿6-27-30</div>
+                <div class="address2">新宿イーストサイドスクエア3F</div>
+                <div class="name">テスト てすたろう</div>
+                <div class="item_name">吉田カバン　FS・コインCS　707－07178　ブラウン</div>
+
+                <div class="shipping_store_code">032-100</div>
+
+                <div class="inquiry_delivery_slip_number">9999-9999-9999-9999</div>
+                <div class="shipping_date"><span class="yyyy">2019</span><span class="MM">01</span><span class="DD">01</span></div>
+                <div class="shipping_specify_date"><span class="MM">01</span><span class="DD">01</span></div>
+                <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
+
+                <div class="stamp"></div>
+                <div>
+                    <svg id="sales_barcode"></svg>
+                    <script>JsBarcode("#sales_barcode", "a123456789012a", {
+                        format: "code128",
+                        width: 1,
+                        height: 50,
+                        margin: 0,
+                        fontSize: 10,
+                        displayValue: true
+                    });
+                    </script>
+                </div>
+            </article>
+
             <article>
                 <div>
                     <svg id="assortment_barcode"></svg>
@@ -73,6 +107,57 @@
                     });
                     </script>
                 </div>
+            </article>
+
+            <article class="paste_slip">
+                <div>
+                    <svg id="assortment_barcode"></svg>
+                    <script>JsBarcode("#assortment_barcode", "a104165a", {
+                        format: "code128",
+                        width: 1,
+                        height: 50,
+                        margin: 0,
+                        fontSize: 10,
+                        displayValue: true
+                    });
+                    </script>
+                    <span>10-41-65</span>
+                </div>
+
+                <div class="delivery_telno delivery_zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
+                <div class="delivery_address1">東京都新宿区新宿6-27-30</div>
+                <div class="delivery_address2">新宿イーストサイドスクエア3F</div>
+                <div class="delivery_name">テスト てすたろう</div>
+                <div class="telno zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
+
+                <div class="address1">東京都新宿区新宿6-27-30</div>
+                <div class="address2">新宿イーストサイドスクエア3F</div>
+                <div class="name">テスト てすたろう</div>
+                <div class="item_name">吉田カバン　FS・コインCS　707－07178　ブラウン</div>
+
+                <div class="shipping_store_code">032-100</div>
+
+                <div class="inquiry_delivery_slip_number">9999-9999-9999-9999</div>
+                <div class="shipping_date"><span class="yyyy">2019</span><span class="MM">01</span><span class="DD">01</span></div>
+                <div class="shipping_specify_date"><span class="MM">01</span><span class="DD">01</span></div>
+                <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
+
+                <div class="stamp"></div>
+                <div>
+                    <svg id="sales_barcode"></svg>
+                    <script>JsBarcode("#sales_barcode", "a123456789012a", {
+                        format: "code128",
+                        width: 1,
+                        height: 50,
+                        margin: 0,
+                        fontSize: 10,
+                        displayValue: true
+                    });
+                    </script>
+                </div>
+            </article>
+
+            <article class="receipt">
             </article>
         </section>
     </body>

@@ -1,0 +1,22 @@
+{
+  "name": "yamato_delivery_slip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/live-server delivery_slip.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watarukura/yamato_delivery_slip.git"
+  },
+  "author": "watarukura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watarukura/yamato_delivery_slip/issues"
+  },
+  "homepage": "https://github.com/watarukura/yamato_delivery_slip#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
