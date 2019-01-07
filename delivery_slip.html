@@ -16,7 +16,57 @@
 
         <!-- Set page size here: A5, A4 or A3 -->
         <!-- Set also "landscape" if you need -->
-        <style>@page { size: A4 landscape }</style>
+        <style>
+            @page { size: A4 landscape }
+            .shipping_slip {
+                position: relative;
+                width: 99mm;
+                height: 95mm;
+            }
+            .assortment_barcode {
+                width: 34mm;
+                height: 15mm;
+                position: relative;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+            .sales_store_code {
+                position: relative;
+                right: 0;
+                font-size: 12mm;
+            }
+            .telno_zipcode {
+                position: relative;
+                left: 10mm;
+                font-size: 9pt;
+            }
+            .address {
+                position: relative;
+                font-size: 11pt;
+            }
+            ul {
+                list-style-type: none;
+            }
+            .name {
+                position: relative;
+                left: 10mm;
+                font-size: 11pt;
+            }
+            .inquiry_delivery_slip_number {
+                position: relative;
+                right: 0;
+                font-size: 9pt;
+            }
+            span[class^="order_date"] {
+                position: relative;
+                margin-top: 0;
+                margin-left: 70mm;
+                top: 0;
+                right: 0;
+                font-size: 9pt;
+            }
+        </style>
     </head>
 
     <!-- Set "A5", "A4" or "A3" for class name -->
@@ -30,84 +80,41 @@
             <article class="shipping_slip">
                 <div>
                     <svg class="assortment_barcode"></svg>
-                    <span>10-41-65</span>
+                    <span class="sales_store_code">10-41-65</span>
                 </div>
 
-                <div class="delivery_telno delivery_zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
-                <div class="delivery_address1">東京都新宿区新宿6-27-30</div>
-                <div class="delivery_address2">新宿イーストサイドスクエア3F</div>
-                <div class="delivery_name">テスト てすたろう</div>
-                <div class="telno zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
-
-                <div class="address1">東京都新宿区新宿6-27-30</div>
-                <div class="address2">新宿イーストサイドスクエア3F</div>
+                <div class="telno_zipcode">
+                    <span>TEL.03-1234-5678</span>
+                    <span>〒160-0022</span>
+                    <span class="inquiry_delivery_slip_number">9999-9999-9999-9999</span>
+                </div>
+                <div class="address">
+                    <ul>
+                        <li>東京都新宿区新宿6-27-30</li>
+                        <li>新宿イーストサイドスクエア3F</li>
+                    </ul>
+                    <span class="order_date_yyyy">2019</span>
+                    <span class="order_date_MM">01</span>
+                    <span class="order_date_DD">02</span>
+                    <span class="shipping_specify_date_MM">01</span>
+                    <span class="shipping_specify_date_DD">05</span>
+                </div>
                 <div class="name">テスト てすたろう</div>
+
+                <div class="telno_zipcode"><span>TEL.03-1234-5678</span> <span>〒160-0022</span></div>
+                <div class="address">
+                    <ul>
+                        <li>東京都新宿区新宿6-27-30</li>
+                        <li>新宿イーストサイドスクエア3F</li>
+                    </ul>
+                </div>
+                <div class="name">テスト てすたろう</div>
+
                 <div class="item_name">吉田カバン　FS・コインCS　707－07178　ブラウン</div>
 
                 <div class="shipping_store_code">032-100</div>
 
-                <div class="inquiry_delivery_slip_number">9999-9999-9999-9999</div>
-                <div class="shipping_date"><span class="yyyy">2019</span><span class="MM">01</span><span class="DD">01</span></div>
-                <div class="shipping_specify_date"><span class="MM">01</span><span class="DD">01</span></div>
-                <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
-
-                <div class="stamp"></div>
-                <div>
-                    <svg class="sales_barcode"></svg>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <svg class="assortment_barcode"></svg>
-                    <span>10-41-65</span>
-                </div>
-
-                <div class="delivery_telno delivery_zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
-                <div class="delivery_address1">東京都新宿区新宿6-27-30</div>
-                <div class="delivery_address2">新宿イーストサイドスクエア3F</div>
-                <div class="delivery_name">テスト てすたろう</div>
-                <div class="telno zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
-
-                <div class="address1">東京都新宿区新宿6-27-30</div>
-                <div class="address2">新宿イーストサイドスクエア3F</div>
-                <div class="name">テスト てすたろう</div>
-                <div class="item_name">吉田カバン　FS・コインCS　707－07178　ブラウン</div>
-
-                <div class="shipping_store_code">032-100</div>
-
-                <div class="inquiry_delivery_slip_number">9999-9999-9999-9999</div>
-                <div class="shipping_date"><span class="yyyy">2019</span><span class="MM">01</span><span class="DD">01</span></div>
-                <div class="shipping_specify_date"><span class="MM">01</span><span class="DD">01</span></div>
-                <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
-
-                <div class="stamp"></div>
-                <div>
-                    <svg id="sales_barcode"></svg>
-                </div>
-            </article>
-
-            <article class="paste_slip">
-                <div>
-                    <svg class="assortment_barcode"></svg>
-                    <span>10-41-65</span>
-                </div>
-
-                <div class="delivery_telno delivery_zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
-                <div class="delivery_address1">東京都新宿区新宿6-27-30</div>
-                <div class="delivery_address2">新宿イーストサイドスクエア3F</div>
-                <div class="delivery_name">テスト てすたろう</div>
-                <div class="telno zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
-
-                <div class="address1">東京都新宿区新宿6-27-30</div>
-                <div class="address2">新宿イーストサイドスクエア3F</div>
-                <div class="name">テスト てすたろう</div>
-                <div class="item_name">吉田カバン　FS・コインCS　707－07178　ブラウン</div>
-
-                <div class="shipping_store_code">032-100</div>
-
-                <div class="inquiry_delivery_slip_number">9999-9999-9999-9999</div>
-                <div class="shipping_date"><span class="yyyy">2019</span><span class="MM">01</span><span class="DD">01</span></div>
+                <div class="inquiry_delivery_slip_number"></div>
                 <div class="shipping_specify_date"><span class="MM">01</span><span class="DD">01</span></div>
                 <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
 
