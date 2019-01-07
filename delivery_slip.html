@@ -28,6 +28,11 @@
         <section class="sheet padding-10mm">
             <!-- Write HTML just like a web page -->
             <article class="shipping_slip">
+                <div>
+                    <svg class="assortment_barcode"></svg>
+                    <span>10-41-65</span>
+                </div>
+
                 <div class="delivery_telno delivery_zipcode"><span>TEL.03-1234-5678</span><span>〒160-0022</span></div>
                 <div class="delivery_address1">東京都新宿区新宿6-27-30</div>
                 <div class="delivery_address2">新宿イーストサイドスクエア3F</div>
@@ -48,31 +53,13 @@
 
                 <div class="stamp"></div>
                 <div>
-                    <svg id="sales_barcode"></svg>
-                    <script>JsBarcode("#sales_barcode", "a123456789012a", {
-                        format: "code128",
-                        width: 1,
-                        height: 50,
-                        margin: 0,
-                        fontSize: 10,
-                        displayValue: true
-                    });
-                    </script>
+                    <svg class="sales_barcode"></svg>
                 </div>
             </article>
 
             <article>
                 <div>
-                    <svg id="assortment_barcode"></svg>
-                    <script>JsBarcode("#assortment_barcode", "a104165a", {
-                        format: "code128",
-                        width: 1,
-                        height: 50,
-                        margin: 0,
-                        fontSize: 10,
-                        displayValue: true
-                    });
-                    </script>
+                    <svg class="assortment_barcode"></svg>
                     <span>10-41-65</span>
                 </div>
 
@@ -97,30 +84,12 @@
                 <div class="stamp"></div>
                 <div>
                     <svg id="sales_barcode"></svg>
-                    <script>JsBarcode("#sales_barcode", "a123456789012a", {
-                        format: "code128",
-                        width: 1,
-                        height: 50,
-                        margin: 0,
-                        fontSize: 10,
-                        displayValue: true
-                    });
-                    </script>
                 </div>
             </article>
 
             <article class="paste_slip">
                 <div>
-                    <svg id="assortment_barcode"></svg>
-                    <script>JsBarcode("#assortment_barcode", "a104165a", {
-                        format: "code128",
-                        width: 1,
-                        height: 50,
-                        margin: 0,
-                        fontSize: 10,
-                        displayValue: true
-                    });
-                    </script>
+                    <svg class="assortment_barcode"></svg>
                     <span>10-41-65</span>
                 </div>
 
@@ -144,16 +113,7 @@
 
                 <div class="stamp"></div>
                 <div>
-                    <svg id="sales_barcode"></svg>
-                    <script>JsBarcode("#sales_barcode", "a123456789012a", {
-                        format: "code128",
-                        width: 1,
-                        height: 50,
-                        margin: 0,
-                        fontSize: 10,
-                        displayValue: true
-                    });
-                    </script>
+                    <svg class="sales_barcode"></svg>
                 </div>
             </article>
 
@@ -162,3 +122,22 @@
         </section>
     </body>
 </html>
+
+<script>JsBarcode(".sales_barcode", "a123456789012a", {
+    format: "code128",
+    width: 1,
+    height: 50,
+    margin: 0,
+    fontSize: 10,
+    displayValue: true
+});
+</script>
+<script>JsBarcode(".assortment_barcode", "a104165a", {
+    format: "code128",
+    width: 1,
+    height: 50,
+    margin: 0,
+    fontSize: 10,
+    displayValue: true
+});
+</script>

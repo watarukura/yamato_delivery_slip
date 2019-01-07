@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/live-server delivery_slip.html"
+    "dev": "node_modules/.bin/live-server delivery_slip.html",
+    "pdf": "node_modules/.bin/chrome-headless-render-pdf --url file://$PWD/delivery_slip.html --pdf ./delivery_slip.pdf --landscape"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/watarukura/yamato_delivery_slip#readme",
   "dependencies": {
+    "chrome-headless-render-pdf": "^1.8.0",
     "live-server": "^1.2.1"
   }
 }
