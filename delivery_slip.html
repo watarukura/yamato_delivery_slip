@@ -24,47 +24,117 @@
                 height: 95mm;
             }
             .assortment_barcode {
+                position: absolute;
                 width: 34mm;
                 height: 15mm;
-                position: relative;
-                left: 0;
-                top: 0;
-                margin: 0;
+                left: 3mm;
+                top: 6mm;
             }
-            .sales_store_code {
-                position: relative;
+            .sales_store_code { 
+                position: absolute;
+                top: 6mm;
                 right: 0;
                 font-size: 12mm;
             }
-            .telno_zipcode {
-                position: relative;
-                left: 10mm;
+            .inquiry_delivery_slip_number {
+                position: absolute;
+                top: 22mm;
+                left: 20mm;
                 font-size: 9pt;
             }
-            .address {
-                position: relative;
+            .order_date_yyyy {
+                position: absolute;
+                top: 22mm;
+                right: 20mm;
+                font-size: 9pt;
+            }
+            .order_date_MM {
+                position: absolute;
+                top: 22mm;
+                right: 10mm;
+                font-size: 9pt;
+            }
+            .order_date_DD {
+                position: absolute;
+                top: 22mm;
+                right: 0mm;
+                font-size: 9pt;
+            }
+            .delivery_telno_zipcode {
+                position: absolute;
+                left: 5mm;
+                top: 25mm;
+                font-size: 9pt;
+            }
+            .delivery_address {
+                position: absolute;
+                left: 5mm;
+                top: 30mm;
                 font-size: 11pt;
             }
             ul {
                 list-style-type: none;
             }
-            .name {
-                position: relative;
+            .delivery_name {
+                position: absolute;
+                top: 45mm;
                 left: 10mm;
                 font-size: 11pt;
             }
-            .inquiry_delivery_slip_number {
-                position: relative;
-                right: 0;
+            .shipping_specify_date_MM {
+                position: absolute;
+                top: 25mm;
+                right: 10mm;
+                font-size: 11pt;
+            }
+            .shipping_specify_date_DD {
+                position: absolute;
+                top: 30mm;
+                right: 5mm;
+                font-size: 11pt;
+            }
+            .shipping_specify_time {
+                position: absolute;
+                top: 40mm;
+                right: 5mm;
+                font-size: 11pt;
+            }
+            .telno_zipcode {
+                position: absolute;
+                left: 5mm;
+                top: 55mm;
                 font-size: 9pt;
             }
-            span[class^="order_date"] {
-                position: relative;
-                margin-top: 0;
-                margin-left: 70mm;
-                top: 0;
-                right: 0;
+            .address {
+                position: absolute;
+                left: 5mm;
+                top: 60mm;
                 font-size: 9pt;
+            }
+            .name {
+                position: absolute;
+                top: 70mm;
+                left: 5mm;
+                font-size: 9pt;
+            }
+            .item_name {
+                position: absolute;
+                top: 80mm;
+                left: 10mm;
+                font-size: 9pt;
+            }
+            .shipping_store_code { 
+                position: absolute;
+                bottom: 6mm;
+                left: 30mm;
+                font-size: 9pt;
+            }
+            .sales_barcode {
+                position: absolute;
+                width: 34mm;
+                height: 18mm;
+                right: 0mm;
+                bottom: 0mm;
             }
         </style>
     </head>
@@ -75,7 +145,7 @@
 
     <!-- Each sheet element should have the class "sheet" -->
     <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
-        <section class="sheet padding-10mm">
+        <section class="sheet">
             <!-- Write HTML just like a web page -->
             <article class="shipping_slip">
                 <div>
@@ -83,23 +153,21 @@
                     <span class="sales_store_code">10-41-65</span>
                 </div>
 
-                <div class="telno_zipcode">
+                <span class="inquiry_delivery_slip_number">9999-9999-9999-9999</span>
+                <span class="order_date_yyyy">2019</span>
+                <span class="order_date_MM">01</span>
+                <span class="order_date_DD">02</span>
+                <div class="delivery_telno_zipcode">
                     <span>TEL.03-1234-5678</span>
                     <span>〒160-0022</span>
-                    <span class="inquiry_delivery_slip_number">9999-9999-9999-9999</span>
                 </div>
-                <div class="address">
+                <div class="delivery_address">
                     <ul>
                         <li>東京都新宿区新宿6-27-30</li>
                         <li>新宿イーストサイドスクエア3F</li>
                     </ul>
-                    <span class="order_date_yyyy">2019</span>
-                    <span class="order_date_MM">01</span>
-                    <span class="order_date_DD">02</span>
-                    <span class="shipping_specify_date_MM">01</span>
-                    <span class="shipping_specify_date_DD">05</span>
                 </div>
-                <div class="name">テスト てすたろう</div>
+                <div class="delivery_name">テスト てすたろう</div>
 
                 <div class="telno_zipcode"><span>TEL.03-1234-5678</span> <span>〒160-0022</span></div>
                 <div class="address">
@@ -110,15 +178,15 @@
                 </div>
                 <div class="name">テスト てすたろう</div>
 
-                <div class="item_name">吉田カバン　FS・コインCS　707－07178　ブラウン</div>
+                <div class="item_name">事務用品</div>
 
                 <div class="shipping_store_code">032-100</div>
 
                 <div class="inquiry_delivery_slip_number"></div>
-                <div class="shipping_specify_date"><span class="MM">01</span><span class="DD">01</span></div>
+                <div class="shipping_specify_date_MM">01</div>
+                <div class="shipping_specify_date_DD">01</div>
                 <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
 
-                <div class="stamp"></div>
                 <div>
                     <svg class="sales_barcode"></svg>
                 </div>
@@ -130,21 +198,21 @@
     </body>
 </html>
 
-<script>JsBarcode(".sales_barcode", "a123456789012a", {
-    format: "code128",
-    width: 1,
-    height: 50,
-    margin: 0,
-    fontSize: 10,
-    displayValue: true
-});
-</script>
-<script>JsBarcode(".assortment_barcode", "a104165a", {
-    format: "code128",
-    width: 1,
-    height: 50,
-    margin: 0,
-    fontSize: 10,
-    displayValue: true
-});
+<script>
+    JsBarcode(".assortment_barcode", "a104165a", {
+        format: "code128",
+        width: 1,
+        height: 50,
+        margin: 0,
+        fontSize: 10,
+        displayValue: true
+    });
+    JsBarcode(".sales_barcode", "a123456789012a", {
+        format: "code128",
+        width: 1,
+        height: 50,
+        margin: 0,
+        fontSize: 10,
+        displayValue: true
+    });
 </script>
