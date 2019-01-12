@@ -19,9 +19,16 @@
         <style>
             @page { size: A4 landscape }
             .shipping_slip {
+                background-color: cyan;
                 position: relative;
                 width: 99mm;
                 height: 95mm;
+            }
+            .paste_slip {
+                position: relative;
+                top: -20mm;
+                width: 99mm;
+                height: 75mm;
             }
             .assortment_barcode {
                 position: absolute;
@@ -125,7 +132,7 @@
             }
             .shipping_store_code { 
                 position: absolute;
-                bottom: 6mm;
+                top: 85mm;
                 left: 30mm;
                 font-size: 9pt;
             }
@@ -167,16 +174,20 @@
                         <li>新宿イーストサイドスクエア3F</li>
                     </ul>
                 </div>
-                <div class="delivery_name">テスト てすたろう</div>
+                <div class="delivery_name">テスト てすたろう 様</div>
 
-                <div class="telno_zipcode"><span>TEL.03-1234-5678</span> <span>〒160-0022</span></div>
+                <div class="telno_zipcode">
+                    <span>TEL.03-1234-5678</span>
+                    <span>〒160-0022</span>
+                </div>
+
                 <div class="address">
                     <ul>
                         <li>東京都新宿区新宿6-27-30</li>
                         <li>新宿イーストサイドスクエア3F</li>
                     </ul>
                 </div>
-                <div class="name">テスト てすたろう</div>
+                <div class="name">テスト てすたろう 様</div>
 
                 <div class="item_name">事務用品</div>
 
@@ -191,6 +202,46 @@
                     <svg class="sales_barcode"></svg>
                 </div>
             </article>
+            <article class="paste_slip">
+                <span class="inquiry_delivery_slip_number">9999-9999-9999-9999</span>
+                <span class="order_date_yyyy">2019</span>
+                <span class="order_date_MM">01</span>
+                <span class="order_date_DD">02</span>
+                <div class="delivery_telno_zipcode">
+                    <span>TEL.03-1234-5678</span>
+                    <span>〒160-0022</span>
+                </div>
+                <div class="delivery_address">
+                    <ul>
+                        <li>東京都新宿区新宿6-27-30</li>
+                        <li>新宿イーストサイドスクエア3F</li>
+                    </ul>
+                </div>
+                <div class="delivery_name">テスト てすたろう 様</div>
+
+                <div class="telno_zipcode">
+                    <span>TEL.03-1234-5678</span>
+                    <span>〒160-0022</span>
+                </div>
+
+                <div class="address">
+                    <ul>
+                        <li>東京都新宿区新宿6-27-30</li>
+                        <li>新宿イーストサイドスクエア3F</li>
+                    </ul>
+                </div>
+                <div class="name">テスト てすたろう 様</div>
+
+                <div class="item_name">事務用品</div>
+
+                <div class="shipping_store_code">032-100</div>
+
+                <div class="inquiry_delivery_slip_number"></div>
+                <div class="shipping_specify_date_MM">01</div>
+                <div class="shipping_specify_date_DD">01</div>
+                <div class="shipping_specify_time"><span class="timeslot">午前中</span></div>
+
+            </article>
 
             <article class="receipt">
             </article>
@@ -201,16 +252,12 @@
 <script>
     JsBarcode(".assortment_barcode", "a104165a", {
         format: "code128",
-        width: 1,
-        height: 50,
         margin: 0,
         fontSize: 10,
         displayValue: true
     });
     JsBarcode(".sales_barcode", "a123456789012a", {
         format: "code128",
-        width: 1,
-        height: 50,
         margin: 0,
         fontSize: 10,
         displayValue: true
