@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/live-server delivery_slip.html",
-    "pdf": "node_modules/.bin/chrome-headless-render-pdf --url file://$PWD/delivery_slip.html --pdf ./delivery_slip.pdf --landscape"
+    "dev": "live-server delivery_slip.html",
+    "pdf": "chrome-headless-render-pdf --url file://$PWD/delivery_slip.html --pdf ./delivery_slip.pdf --landscape"
   },
   "repository": {
     "type": "git",
